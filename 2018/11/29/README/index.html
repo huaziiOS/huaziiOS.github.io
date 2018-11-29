@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>huaziiOS&#39; Blog.</title>
+    <title>README · huaziiOS&#39; Blog.</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">huaziiOS&#39; Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">README</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">huaziiOS' Blog.</a>
 </header>
@@ -220,24 +231,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            README
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">308</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/11/29</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,102 +393,85 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/29/README/">
-            
-                <span>README</span>
-        </a>
-        <div class="abstract-content">
-            常用指令和发布文章
-常用指令
-hexo new “postName”        //新建文章
-hexo new page “pageName”        //新建页面
-hexo g          //生成静态页面至public目录
-hexo server         //开启预览访问端口（默认端口4000，’ctrl + c’关闭server）
-hexo deploy         //将.deploy目录部署到GitHub
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="常用指令和发布文章"><a href="#常用指令和发布文章" class="headerlink" title="常用指令和发布文章"></a>常用指令和发布文章</h1><ul>
+<li>常用指令<ul>
+<li>hexo new “postName”        //新建文章</li>
+<li>hexo new page “pageName”        //新建页面</li>
+<li>hexo g          //生成静态页面至public目录</li>
+<li>hexo server         //开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
+<li>hexo deploy         //将.deploy目录部署到GitHub</li>
+</ul>
+</li>
+<li><p>常用组合</p>
+<ul>
+<li>hexo clean</li>
+<li>hexo g</li>
+<li><p>hexo d</p>
+</li>
+<li><p>hexo d -g #生成部署</p>
+</li>
+<li>hexo s -g #生成预览</li>
+</ul>
+</li>
+<li><p>发布文章</p>
+<ul>
+<li><p>终端cd到blog文件夹下，执行如下命令新建文章：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;xxx&quot;</span><br><span class="line">名为xxx.md的文件会建在目录.../blog/source/_posts下。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>所有的文章都会以md形式保存在_post文件夹中，只要在_post文件夹中新建md类型的文档，就能在执行hexo g的时候被渲染。新建的文章头需要添加一些信息，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: xxx    //在此处添加你的标题。</span><br><span class="line">date: 2016-10-07 13:38:49   //在此处输入编辑这篇文章的时间。</span><br><span class="line">tags: xxx    //在此处输入这篇文章的标签。</span><br><span class="line">categories: xxx    //在此处输入这篇文章的分类。</span><br><span class="line">   ---</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 文章编辑完成后，终端cd到blog文件夹下，依次执行如下命令来发布：
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 
-常用组合
-
-hexo clean
-hexo g
-hexo d
-
-hexo d -g #生成部署
-
-hexo s -g #生成预览
-
-
-发布文章...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/29</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+* 至此，Mac 上搭建基于 GitHub Pages + Hexo 的博客就完成了。
+</code></pre>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/29/手动搭建自己的Workspace/">
-            
-                <span>手动搭建自己的Workspace</span>
-        </a>
-        <div class="abstract-content">
-            手动搭建自己的Workspace前景摘要: 回忆一下, 当你创建一个工程的时候, 它是一个Project, 此时你打开工程都是通过 .xcodeproj文件, 但是当你项目中引入了通过cocoapods管理的第三方工程, 你再打开工程是通过 .xcworkspace文件, 有没有思考过这是为什么?Workspace: 工作区的概念, 一个工作区中我们可以同时添加多个工程, 这些工程可以相互独立, 也可以彼此之间产生关联, 在这个工作区中, 我们可以快速的切换这些项目的开发工作, 非常方便.通常情况下, 如果项目不复杂, 又不涉及到本地项目的引用(SDK工程), 一般是用不到Workspa...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">运动, 编码两不误</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2018/11/29/README/">http://yoursite.com/2018/11/29/README/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2018/11/29/README/">November 29th 2018, 10:46:13 am</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2018/11/29/README/">November 29th 2018, 10:58:24 am</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/29</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/20/Imitation-Alipay/">
-            
-                <span>仿支付宝首页效果实现</span>
-        </a>
-        <div class="abstract-content">
-            仿支付宝首页效果实现参考资料: iOS 高仿支付宝 9.x 版本首页
-但是我跟参考资料中作者关于整个页面的设计逻辑不一致, 但是实现的效果一样, 也算是多一种实现方式, 希望跟大家一起共同学习.先上效果
-整个界面的结构图
-关于整个页面布局逻辑, 从上往下说:1.顶部: “类导航栏”, 因为其并不是导航栏, 只是一个跟导航栏尺寸一致的View, 所以进入这个页面的时候需要将自带的导航栏隐藏掉. 此部分共三层, 从底层往上依次是: 底色View(蓝色背景色), 扫一扫View(刚开始隐藏, 向上滚动后逐渐显示), 搜索框View.2. tableView, 紧接着就是一个带有tableHea...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/20</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2018/11/29/手动搭建自己的Workspace/" title="手动搭建自己的Workspace">
+                    <div class="prevTitle">手动搭建自己的Workspace</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -509,6 +547,24 @@ hexo s -g #生成预览
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常用指令和发布文章"><span class="toc-number">1.</span> <span class="toc-text">常用指令和发布文章</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -648,6 +704,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
